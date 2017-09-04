@@ -378,6 +378,9 @@
         this.onPick && this.onPick(val);
         this.maxDate = val.maxDate;
         this.minDate = val.minDate;
+        if (this.maxDate) {
+          this.maxDate.setTime(this.maxDate.getTime() + (24 * 60 * 60 - 1) * 1000);
+        }
         if (!close || this.showTime) return;
         this.handleConfirm();
       },
