@@ -33,9 +33,7 @@ const defaults = {
 const forced = {
   selection: {
     renderHeader: function(h) {
-      return <el-checkbox
-        nativeOn-click={ this.toggleAllSelection }
-        value={ this.isAllSelected } />;
+      return '选择';
     },
     renderCell: function(h, { row, column, store, $index }) {
       return <el-checkbox
